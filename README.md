@@ -1,4 +1,4 @@
-# Universidad Tecnológica Nacional - Facultad Regional Córdoba
+# Universidad Tecnológica Nacional - FRC
 ## Ingenieria de Software - 2019
 ### *Grupo N° 7* - TP N° 5
 
@@ -13,7 +13,7 @@
 
 * Detalle
 
-    * nro= número de la user story
-    * nombre=nombre en letras minusculas, espacio reemplazado por guión medio (-)
+    * \<nro\>= número de la user story
+    * \<nombre\>=nombre en letras minusculas, espacio reemplazado por guión medio (-)
          
     
