@@ -1,11 +1,8 @@
-* Universidad Tecnológica Nacional - Facultad Regional Córdoba
-** Ingenieria de Software - 2019
-*** Grupo N° 7
+# Universidad Tecnológica Nacional - Facultad Regional Córdoba
+## Ingenieria de Software - 2019
+### Grupo N° 7 - *TP N° 5*
 
-2019-UTN-FRC-ISW-4K2-G7-TP5
-
-2019-UTN-FRC-ISW-4K2-G7-TP5
-
+* Reglas de nombrado del repositorio
 
 <table style="width:100%">
  <tr>
@@ -14,9 +11,14 @@
 	 <th>Ubicación física</th>
  </tr>
  <tr>
-	 <td>Jill</td>
-	 <td>Jill</td>
-	 <td>Jill</td>
+	 <td>User Story</td>
+	 <td>US_<nro>_<nombre></td>
+	 <td>Producto/Requerimientos</td>
  </tr>
 
 </table>
+´´´
+## Detalle
+nro= número de la user story
+nombre=nombre en letras minusculas, espacio reemplazado por guión medio (-)
+´´´
