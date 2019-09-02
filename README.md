@@ -6,7 +6,7 @@
 
 | Nombre  | Regla de nombrado  | Ubicación física |
 | :------------ |:---------------:| -----:|
-| User Story      | US_\<nro\>_\<nombre\> | Producto/Requerimientos |
+| User Story      | US_\<nro\>_\<nombre\>.txt | Producto/Requerimientos |
 | | | |
 | | | |
 
