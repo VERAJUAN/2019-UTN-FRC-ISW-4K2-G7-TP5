@@ -6,23 +6,29 @@
 
 | Nombre  | Regla de nombrado  | Ubicación física |
 | :------------ |:---------------:| -----:|
-| Informe Técnico | Informe-técnico.pdf | Trabajos Conceptuales/Informe Técnico |
-| Poster científico | Poster-Científico.pdf | Trabajos Conceptuales/Poster Científico |
-| Técnica Pecha Kucha | Pecha-Kucha.pptx | Trabajos Conceptuales/Pecha Kucha |
-| Planificación | Planificación.pdf | Proyecto/Planificación |
-| User Story | US_\<nro\>_\<nombre-us\>.txt | Producto/Requerimientos |
-| Product Backlog | PB_sprint_\<nro\>.txt | Producto/Iteracion/Backlog |
-| Metricas | metricas_\<nombre-metrica\>_\<nro\>.png | Producto/Iteracion/Metricas |
-| Codigo | Planificación_\<nro\>.pdf | Producto/Iteracion/Desarrollo |
-| Pruebas | Prueba_\<nro\>_\<nombre-prueba\>.txt | Producto/Iteracion/Testing |
-| Reporte de defectos | Defecto_\<nro\>.pdf | Producto/Iteracion/Testing |
-| Manual Usuario | Manual_\<nro\>.pdf | Producto/Iteracion/Manual |
-| Trabajo Práctico | Trabajo-Práctico_\<nro\>.docx | Trabajos Prácticos/Trabajos Evaluables |
+| Informe Técnico | Informe-técnico.pdf | \<url-repo\>/Trabajos Conceptuales/Informe Técnico |
+| Poster científico | Poster-Científico.pdf | \<url-repo\>/Trabajos Conceptuales/Poster Científico |
+| Técnica Pecha Kucha | Pecha-Kucha.pptx | \<url-repo\>/Trabajos Conceptuales/Pecha Kucha |
+| Trabajos Practicos | TP_Nro_\<nro\>_\<nombre-tp\> | \<url-repo\>/Trabajos Practicos/Evaluables |
+| Planificación | Planificación.pdf | \<url-repo\>/Proyecto/Planificación |
+| User Story | US_\<nro\>_\<nombre-us\>.txt | \<url-repo\>/Producto/Requerimientos |
+| Product Backlog | PB_sprint_\<nro\>.txt | \<url-repo\>/Producto/Iteracion/Backlog |
+| Metricas | metricas_\<nombre-metrica\>_\<nro\>.png | \<url-repo\>/Producto/Iteracion/Metricas |
+| Codigo | \<nombre-archivo\>.\<ext\> | \<url-repo\>/Producto/Iteracion/Desarrollo |
+| Caso de Prueba | CP_\<nro\>_\<nombre-prueba\>.txt | \<url-repo\>/Producto/Iteracion/Testing |
+| Plan de Prueba | Plan-de-prueba.docx | \<url-repo\>/Producto/Iteracion/Testing |
+| Reporte de defectos | Reporte-defectos.pdf | \<url-repo\>/Producto/Iteracion/Testing |
+| Manual Usuario | Manual_\<nro\>.pdf | \<url-repo\>/Producto/Iteracion/Manual |
 
 
 * Glosario
 
-    * \<nro\> = número consecutivo del tipo 001.
-    * \<nombre-us\> = nombre en letras minusculas, espacio reemplazado por guión medio (-).
-    * \<nombre-metrica\> = nombre en letras minusculas, espacio reemplazado por guión medio (-).
+    * \<url-repo\> = corresponde a la direccion url del proyecto, https://github.com/VERAJUAN/2019-UTN-FRC-ISW-4K2-G7-TP5
+    * \<nro\> = número secuencial correlativo de 3 dígitos, del tipo 001.
+    * \<nombre-tp\> = nombre del trabajo practico en letras minusculas, espacio reemplazado por guión medio (-).
+    * \<nombre-us\> = nombre de la user sory en letras minusculas, espacio reemplazado por guión medio (-).
+    * \<nombre-metrica\> = nombre de a metrica en letras minusculas, espacio reemplazado por guión medio (-).
     * \<nombre-prueba\> = nombre en letras minusculas, espacio reemplazado por guión medio (-).
+    * \<nombre-archivo\> = nombre correspondiente al archivo de código a utilizar escrito en letras minusculas y mayuscula inicial. Debe tener el nombre del objeto como precedente y los espacios reemplazados por guion medio (-), ejemplo Clase-pedido.
+    * \<ext\> = extencion del tipo de archivo a utilizar en el desarrollo del código, ejemplo html, css, cs
+	
