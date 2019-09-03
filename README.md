@@ -19,6 +19,7 @@
 | Plan de Prueba | Plan-de-prueba.docx | \<url-repo\>/Producto/Iteracion/Testing |
 | Reporte de defectos | Reporte-defectos.pdf | \<url-repo\>/Producto/Iteracion/Testing |
 | Manual Usuario | Manual_\<nro\>.pdf | \<url-repo\>/Producto/Iteracion/Manual |
+| Items de Config. y criterios Linea Base | Readme.md | \<url-repo\>/ |
 
 
 * Glosario
