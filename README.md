@@ -17,6 +17,7 @@
 | Pruebas | Prueba_\<nro\>_\<nombre-prueba\>.txt | Producto/Iteracion/Testing |
 | Reporte de defectos | Defecto_\<nro\>.pdf | Producto/Iteracion/Testing |
 | Manual Usuario | Manual_\<nro\>.pdf | Producto/Iteracion/Manual |
+| Línea Base del proyecto | Linea-base_\<nro\>_\<nombre-linea-base\>_.docx | Producto/Lineas Base |
 
 
 * Detalle
@@ -25,3 +26,4 @@
     * \<nombre-us\> = nombre en letras minusculas, espacio reemplazado por guión medio (-).
     * \<nombre-metrica\> = nombre en letras minusculas, espacio reemplazado por guión medio (-).
     * \<nombre-prueba\> = nombre en letras minusculas, espacio reemplazado por guión medio (-).
+    * \<nombre-linea-base\> = nombre en letras minusculas, espacio reemplazado por guión medio (-).
