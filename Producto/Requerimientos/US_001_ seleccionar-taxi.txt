@@ -1,0 +1,15 @@
+Como pasajero quiero selecciona un taxi disponible para realizar un viaje
+
+Notas:
+-Se notifica a la central de taxis y al celular del taxista
+-Debe tener la ubicacion activada y GPS con señal disponible
+
+Pruebas:
+-Probar notificar al celular del taxista(pasa)
+-Pobar notificar a la central de taxis(pasa)
+-Probar seleccionar taxi disponible(pasa)
+-Probar no notificar al celular del taxista(falla)
+-Pobar no notificar a la central de taxis(falla)
+-Probar seleccionar taxi no disponible(falla)
+-Probar seleccionar taxi sin ubicacion activada(falla)
+-Probar seleccionar taxi sin señal de GPS(falla)
