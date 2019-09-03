@@ -2,7 +2,7 @@
 ## Ingenieria de Software - 2019
 ### *Grupo N° 7* - TP N° 5
 
-* Reglas de nombrado del repositorio
+* Listado de Ítems de Configuración
 
 | Nombre  | Regla de nombrado  | Ubicación física |
 | :------------ |:---------------:| -----:|
@@ -20,10 +20,9 @@
 | Trabajo Práctico | Trabajo-Práctico_\<nro\>.docx | Trabajos Prácticos/Trabajos Evaluables |
 
 
-* Detalle
+* Glosario
 
     * \<nro\> = número consecutivo del tipo 001.
     * \<nombre-us\> = nombre en letras minusculas, espacio reemplazado por guión medio (-).
     * \<nombre-metrica\> = nombre en letras minusculas, espacio reemplazado por guión medio (-).
     * \<nombre-prueba\> = nombre en letras minusculas, espacio reemplazado por guión medio (-).
-	
