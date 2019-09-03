@@ -31,4 +31,16 @@
     * \<nombre-prueba\> = nombre en letras minusculas, espacio reemplazado por guión medio (-).
     * \<nombre-archivo\> = nombre correspondiente al archivo de código a utilizar escrito en letras minusculas y mayuscula inicial. Debe tener el nombre del objeto como precedente y los espacios reemplazados por guion medio (-), ejemplo Clase-pedido.
     * \<ext\> = extencion del tipo de archivo a utilizar en el desarrollo del código, ejemplo html, css, cs
+
+
+#### Criterios para la creación de la linea base
+
+>El presente documento describe los criterios de identificacion para los items que van a componer la linea base a lo largo del cursado de la materia **Ingeniería de Software**.
+>
+>* Los items de configuración que integren una linea base, serán aquellos archivos formalmente diseñados y corregidos, que pasen por un proceso de revisión por parte de los integrantes del proyecto para garantizar que se corresponde con una versión estable del mismo.
+>* Los items que van a incluirse en la linea base serán todos aquellos que van a ir cambiando o modificandose a lo largo del cursado de la materia ISW.
+>* Los items de configuración seleccionados, que compondrán la linea base deberán tener identificadores únicos respetando la regla de nombrado y su respectiva ubicación.
+>* Solo puede haber una linea base activa en un momento determinado.
+>* Se designará un integrante del grupo para gestionar el control de cambios sobre items de configuración.
+>* Se utilizará el repositorio GitHub para el control y monitoreo de cambios.
 	
