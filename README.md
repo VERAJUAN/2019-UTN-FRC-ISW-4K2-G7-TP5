@@ -43,5 +43,5 @@
 >* Los items de configuración seleccionados, que compondrán la linea base deberán tener identificadores únicos respetando la regla de nombrado y su respectiva ubicación.
 >* Solo puede haber una linea base activa en un momento determinado.
 >* Se designará un integrante del grupo para gestionar el control de cambios sobre items de configuración.
->* Se utilizará el repositorio GitHub para el control y monitoreo de cambios.
+>* Se utilizará el repositorio Git para el control y monitoreo de cambios.
 	
