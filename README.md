@@ -17,6 +17,7 @@
 | Pruebas | Prueba_\<nro\>_\<nombre-prueba\>.txt | Producto/Iteracion/Testing |
 | Reporte de defectos | Defecto_\<nro\>.pdf | Producto/Iteracion/Testing |
 | Manual Usuario | Manual_\<nro\>.pdf | Producto/Iteracion/Manual |
+| Trabajo Práctico | Trabajo-Práctico_\<nro\>.docx | Trabajos Prácticos/Trabajos Evaluables |
 
 
 * Detalle
