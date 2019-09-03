@@ -9,7 +9,7 @@
 | Informe Técnico | Informe-técnico.pdf | \<url-repo\>/Trabajos Conceptuales/Informe Técnico |
 | Poster científico | Poster-Científico.pdf | \<url-repo\>/Trabajos Conceptuales/Poster Científico |
 | Técnica Pecha Kucha | Pecha-Kucha.pptx | \<url-repo\>/Trabajos Conceptuales/Pecha Kucha |
-| Trabajos Practicos | TP_Nro_\<nro\>_\<nombre-tp\> | \<url-repo\>/Trabajos Practicos/Evaluables |
+| Trabajos Practicos | TP_Nro_\<nro\>_\<nombre-tp\>.docx | \<url-repo\>/Trabajos Practicos/Evaluables |
 | Planificación | Planificación.pdf | \<url-repo\>/Proyecto/Planificación |
 | User Story | US_\<nro\>_\<nombre-us\>.txt | \<url-repo\>/Producto/Requerimientos |
 | Product Backlog | PB_sprint_\<nro\>.txt | \<url-repo\>/Producto/Iteracion/Backlog |
@@ -31,7 +31,7 @@
     * \<nombre-metrica\> = nombre de a metrica en letras minusculas, espacio reemplazado por guión medio (-).
     * \<nombre-prueba\> = nombre en letras minusculas, espacio reemplazado por guión medio (-).
     * \<nombre-archivo\> = nombre correspondiente al archivo de código a utilizar escrito en letras minusculas y mayuscula inicial. Debe tener el nombre del objeto como precedente y los espacios reemplazados por guion medio (-), ejemplo Clase-pedido.
-    * \<ext\> = extencion del tipo de archivo a utilizar en el desarrollo del código, ejemplo html, css, cs
+    * \<ext\> = extensión del tipo de archivo a utilizar en el desarrollo del código, ejemplo html, css, cs
 
 
 #### Criterios para la creación de la linea base
