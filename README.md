@@ -44,16 +44,16 @@
 
 | Sigla  | Descripción |
 | :------------ | -----:|
-    | \<url-repo\> | corresponde a la direccion url del proyecto, https://github.com/VERAJUAN/2019-UTN-FRC-ISW-4K2-G7-TP5
-    | \<nro\> | número secuencial correlativo de 3 dígitos, del tipo 001.
-    | \<nombre-tp\> | nombre del trabajo practico en letras minusculas, espacio reemplazado por guión medio (-).
-    | \<nombre-us\> | nombre de la user sory en letras minusculas, espacio reemplazado por guión medio (-).
-	| \<nombre-m\> | nombre del material en letras minusculas, espacio reemplazado por guión medio (-).
-	| \<nombre-tr\> | nombre de los trabjos con resolucion en letras minusculas, espacio reemplazado por guión medio (-).
-	| \<nombre-lb\> | nombre del libro en letras minusculas, espacio reemplazado por guión medio (-).
-	| \<autores-lb\> | nombre de los autores de los libros, espacio reemplazado por guión medio (-).
-    | \<nombre-archivo\> | nombre correspondiente al archivo de código a utilizar escrito en letras minusculas y mayuscula inicial. Debe tener el nombre del objeto como precedente y los espacios reemplazados por guion medio (-), ejemplo Clase-pedido.
-    | \<ext\> | extensión del tipo de archivo a utilizar en el desarrollo del código, ejemplo html, css, cs|
+| \<url-repo\> | corresponde a la direccion url del proyecto, https://github.com/VERAJUAN/2019-UTN-FRC-ISW-4K2-G7-TP5
+| \<nro\> | número secuencial correlativo de 3 dígitos, del tipo 001.
+| \<nombre-tp\> | nombre del trabajo practico en letras minusculas, espacio reemplazado por guión medio (-).
+| \<nombre-us\> | nombre de la user sory en letras minusculas, espacio reemplazado por guión medio (-).
+| \<nombre-m\> | nombre del material en letras minusculas, espacio reemplazado por guión medio (-).
+| \<nombre-tr\> | nombre de los trabjos con resolucion en letras minusculas, espacio reemplazado por guión medio (-).
+| \<nombre-lb\> | nombre del libro en letras minusculas, espacio reemplazado por guión medio (-).
+| \<autores-lb\> | nombre de los autores de los libros, espacio reemplazado por guión medio (-).
+| \<nombre-archivo\> | nombre correspondiente al archivo de código a utilizar escrito en letras minusculas y mayuscula inicial. Debe tener el nombre del objeto como precedente y los espacios reemplazados por guion medio (-), ejemplo Clase-pedido.
+| \<ext\> | extensión del tipo de archivo a utilizar en el desarrollo del código, ejemplo html, css, cs|
 
 
 #### Criterios para la creación de la linea base
