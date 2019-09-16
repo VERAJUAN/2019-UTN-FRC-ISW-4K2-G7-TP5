@@ -44,7 +44,6 @@
 
 | Sigla  | Descripción |
 | :------------ | -----:|
-| \<url-repo\> | corresponde a la direccion url del proyecto, https://github.com/VERAJUAN/2019-UTN-FRC-ISW-4K2-G7-TP5
 | \<nro\> | número secuencial correlativo de 3 dígitos, del tipo 001.
 | \<nombre-doc\> | nombre del documento de la catedra en letras minusculas, espacio reemplazado por guión medio (-).
 | \<nombre-fil\> | nombre de la filmina de la catedra en letras minusculas, espacio reemplazado por guión medio (-).
