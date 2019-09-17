@@ -13,15 +13,14 @@
 ├── Trabajos
 │   ├── Guías de trabajos
 │   │── Trabajos conceptuales
-│   │   ├── Informe Técnico
-│   │   ├── Pecha Kucha
-│   │   └── Poster Científico
+│   │   └── Informe Técnico
+│   │         │──Informe técnico Continuous Delivery- Grupo 7 - Ingeniería de software - UTN FRC.pdf
+│   │         └── Formato-IEEE-Informes.pdf
 │   └── Trabajos Prácticos
 │       │── Prácticos Evaluables
 │       │   └── TP06
-│       │       └── Implementación
+│       │       └── TP6 - User Stories DeliverEat.docx
 │       └── Prácticos No Evaluables
-│           └── TP02
 └── README.md
 
 ```
@@ -36,7 +35,7 @@
 | Guías de trabajos | GUIA - \<nombre-guía> - 2019.pdf | /Trabajos/Guías de trabajos
 | Prácticos no Evaluables | TP\<nro> - \<nombre-tpNE>.pdf | /Trabajos/Trabajos Prácticos/Prácticos No Evaluables
 | User stories para el práctico evaluable 06 | User Stories DeliverEat.docx | /Trabajos/Trabajos Prácticos/Prácticos Evaluables/TP06
-| Informe técnico Continuous Delivery | Informe técnico Continuous Delivery- Grupo 7 - Ingeniería de software - UTN FRC.pdf | /Trabajos/Trabajos Conceptuales/Informe Técnico
+| Informe técnico Continuous Delivery | Informe técnico Continuous Delivery - Grupo 7 - Ingeniería de software - UTN FRC.pdf | /Trabajos/Trabajos Conceptuales/Informe Técnico
 | Template informe técnico IEEE | Formato-IEEE-Informes.pdf | /Trabajos/Trabajos Conceptuales/Informe Técnico
 
 
