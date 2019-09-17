@@ -44,10 +44,11 @@
 | Sigla  | Descripción |
 | :------------ | -----:|
 | \<nro\> | número secuencial correlativo de 2 dígitos, del tipo 01.
-| \<nombre-doc\> | nombre del documento  de la catedra comenzando la primera con mayuscula y seguida en letras minusculas.
-| \<nombre-fil\> | nombre de la filmina  de la catedra comenzando la primera con mayuscula en letras minusculas.
-| \<nombre-guía\> | nombre de la guia de trabajos en letras mayusculas.
-| \<nombre-tpNE\> | nombre de los trabajos practicos no evaluables en letras minusculas, comenzando cada palabra con mayuscula.
+| \<nombre-doc\> | nombre del documento  de la catedra comenzando la primera letra con mayúscula y seguida en letras minúsculas.
+| \<nombre-fil\> | nombre de la filmina  de la catedra comenzando la primera letra con mayúscula y seguida en letras minúsculas.
+| \<nombre-mat\> | nombre del material de clase comenzando cada palabra con mayúsculas.
+| \<nombre-guía\> | nombre de la guía de trabajos en letras mayúscula.
+| \<nombre-tpNE\> | nombre de los trabajos prácticos no evaluables en letras minúsculas, comenzando cada palabra con mayúscula.
 
 
 
