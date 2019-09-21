@@ -50,7 +50,7 @@ padding: 20px;
   font-size: 14px
 }
 
-.button-select{
+.button-Select{
   border: 1px solid #c1c1c1;
   border-radius: 6px;
   margin: 30px 10% 0px 10%;
@@ -59,12 +59,12 @@ padding: 20px;
   cursor: pointer
 }
 
-label.button-select{
+label.button-Select{
   display: inline-block;
     width: calc(100% - 114px);
 }
 
-.button-select.enviar{
+.button-Select.enviar{
   background-color: #e14cff;
   color: #fff;
   margin-bottom: 25px
