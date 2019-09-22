@@ -2,11 +2,12 @@
 <html lang="es" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <script type="text/javascript" src="js/angular.min.js"/></script>
     <link href="https://unpkg.com/basscss@8.0.2/css/basscss.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <title>Pedir Lo que sea</title>
   </head>
-  <body>
+  <body ng-app="myApp" ng-controller="myCtrl">
     <div class="header">
         <img src=""/>
     </div>
@@ -14,19 +15,19 @@
       Pedir lo que sea
       </div>
      <div class="sm-col sm-col-12">
-    <form class="" method="post">
+    <form class="" name="formLoQueSea">
 
       <div class="block-form">
         <h1>Detalle de pedido</h1>
         <h3>¿Qué necesitas?</h3>
-        <textarea name="name" rows="8"></textarea>
+        <textarea name="name" rows="8" ng-model="detallePedido"></textarea>
       </div>
 
       <div class="block-form">
         <h1>Foto del artículo (opcional)</h1>
         <h3>Para guiar al cadete</h3>
 
-        <label class="button-select" for="upload-photo">Adjuntar imagen
+        <label class="button-Select" for="upload-photo">Adjuntar imagen
         </label>
         <input type="file" name="photo" id="upload-photo" accept="image/jpeg" />
 
@@ -35,9 +36,9 @@
       <div class="block-form">
         <h1>Dirección del comercio</h1>
         <h3>Lugar exacto donde el cadete lo busca</h3>
-        <div class="button-select">Describir dirección
+        <div class="button-Select">Describir dirección
         </div>
-        <div class="button-select">Ubicar en mapa
+        <div class="button-Select">Ubicar en mapa
         </div>
       </div>
 
@@ -49,27 +50,29 @@
       <div class="block-form">
         <h1>Momento de entrega</h1>
         <h3>¿Cuándo quieres recibirlo?</h3>
-        <div class="button-select">Lo antes posible
+        <div class="button-Select" ng-model="momentoLoAntesPosible" >Lo antes posible
         </div>
-        <div class="button-select">Programar hora
+        <div class="button-Select" ng-model="momentoProgramado">Programar hora
         </div>
       </div>
 
       <div class="block-form">
         <h1>Datos de pago</h1>
         <h3>¿Cómo deseas pagarlo?</h3>
-        <div class="button-select">Tarjeta VISA
+        <div class="button-Select" ng-model="metodoTarjeta" ng-click="seleccionarMetodo()">Tarjeta VISA
         </div>
-        <div class="button-select">Efectivo
+        <div class="button-Select" ng-model="metodoEfectivo" ng-click="seleccionarMetodo(B)">Efectivo
         </div>
       </div>
-      
-        <div class="button-select enviar">Enviar pedido
+
+        <div class="button-Select enviar" ng-model="enviarPedido" ng-disabled="formLoQueSea.$invalid">Enviar pedido
         </div>
 
 
     </form>
     </div>
 
+
+    <script type="text/javascript" src="js/app.js"></script>
   </body>
 </html>
