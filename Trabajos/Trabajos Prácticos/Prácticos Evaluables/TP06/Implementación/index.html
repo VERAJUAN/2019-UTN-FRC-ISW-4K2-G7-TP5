@@ -59,9 +59,9 @@
       <div class="block-form">
         <h1>Datos de pago</h1>
         <h3>¿Cómo deseas pagarlo?</h3>
-        <div class="button-Select" ng-model="metodoTarjeta" ng-click="seleccionarMetodo()">Tarjeta VISA
+        <div ng-class="{'button-Select' : 'true', 'border' : metodoPago == 'T'}" ng-model="metodoTarjeta" ng-click="metodoPago='T'">Tarjeta VISA
         </div>
-        <div class="button-Select" ng-model="metodoEfectivo" ng-click="seleccionarMetodo(B)">Efectivo
+        <div ng-class="{'button-Select' : 'true', 'border' : metodoPago == 'E'}" ng-model="metodoEfectivo" ng-click="metodoPago='E'">Efectivo
         </div>
       </div>
 
