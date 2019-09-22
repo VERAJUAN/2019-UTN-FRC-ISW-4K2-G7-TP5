@@ -50,9 +50,9 @@
       <div class="block-form">
         <h1>Momento de entrega</h1>
         <h3>¿Cuándo quieres recibirlo?</h3>
-        <div class="button-Select" ng-model="momentoLoAntesPosible" >Lo antes posible
+        <div ng-class="{'button-Select' : 'true', 'border' : momentoEntrega == 'A'}" ng-model="momentoLoAntesPosible" ng-click="momentoEntrega='A'" >Lo antes posible
         </div>
-        <div class="button-Select" ng-model="momentoProgramado">Programar hora
+        <div ng-class="{'button-Select' : 'true', 'border' : momentoEntrega == 'P'}" ng-model="momentoProgramado" ng-click="momentoEntrega='P'">Programar hora
         </div>
       </div>
 
