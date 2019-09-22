@@ -81,7 +81,7 @@
         </div>
         <div ng-class="{'button-Select' : 'true', 'border' : momentoEntrega == 'P'}" ng-model="momentoProgramado" ng-click="momentoEntrega='P'">Programar hora
         </div>
-        <div class="formProgramar" ng-show="momentoEntrega == 'P'">
+        <div class="formAdicional" ng-show="momentoEntrega == 'P'">
           <label for="" class="">Hora</label>
           <input type="time" name="" value="" class="border" ng-required>
 
@@ -97,8 +97,24 @@
         <h3>¿Cómo deseas pagarlo?</h3>
         <div ng-class="{'button-Select' : 'true', 'border' : metodoPago == 'E'}" ng-model="metodoEfectivo" ng-click="metodoPago='E'">Efectivo
         </div>
+        <div class="formAdicional" ng-show="metodoPago == 'E'">
+          <label for="" class="">Monto con el que vas abonar</label>
+          <input style="width: 76px" type="text" name="" value="">
+        </div>
         <div ng-class="{'button-Select' : 'true', 'border' : metodoPago == 'T'}" ng-model="metodoTarjeta" ng-click="metodoPago='T'">Tarjeta VISA
         </div>
+
+        <div class="formAdicional" ng-show="metodoPago == 'T'">
+          <label for="" >Número de tarjeta</label>
+          <input type="text" name="" value="" ng-required>
+          <label for="" >Nombre y apellido del titular</label>
+          <input type="text" name="" value="" ng-required>
+          <label for="" class="">Fecha de vencimiento</label>
+          <input style="width: 100px" placeholder="mm/yy"type="text" name="" value="" ng-required>
+          <label for="" class="">Código de seguridad</label>
+          <input style="width: 100px" type="text" name="" value="" ng-required>
+        </div>
+
       </div>
 
         <div class="button-Select enviar" ng-model="enviarPedido" ng-disabled="!formLoQueSea.$invalid">Enviar pedido

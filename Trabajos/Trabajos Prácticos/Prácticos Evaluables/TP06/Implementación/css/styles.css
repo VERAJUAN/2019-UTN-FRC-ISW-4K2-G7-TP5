@@ -79,6 +79,10 @@ label.button-Select{
   border-color: #c43ac4 !important;
   border-radius: 10px;
 }
+.border-Venc{
+  border-style: solid !important;
+  border-radius: 10px;
+}
 
 #upload-photo {
   width: 0.1px;
@@ -89,8 +93,9 @@ label.button-Select{
   	z-index: -1;
 }
 
-.formProgramar{
+.formAdicional{
   margin-top: 20px;
+  margin-left: 10px
 }
 
 .button-Select.enviar.ng-disabled{
