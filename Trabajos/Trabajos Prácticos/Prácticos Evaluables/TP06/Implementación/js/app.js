@@ -1,9 +1,36 @@
 var app = angular.module("myApp", []);
 
-app.controller("myCtrl", function ($scope) {
+app.controller("myCtrl", function($scope,$http) {
 
     $scope.momentoEntrega = "" // 'A' lo antes posible, 'P' hora programada
     $scope.metodoPago = "" // 'T' tarjeta de credito, 'E' efectivo
+
+    $scope.obtenerCoordenadasComercio = function () {
+        $http.get('https://maps.googleapis.com/maps/api/geocode/json?address='
+        + $scope.alturaComercio + '+'
+        + $scope.calleComercio + ',+'
+        + $scope.ciudadComercio +
+        ',+cordoba'+
+        '&key=AIzaSyDWm21zrmC4NZfNez65rFSmHrugggF5rAY')
+
+        .then(function (respuesta) {
+            console.log(respuesta.data.results[0].geometry.location)
+        })
+    }
+
+    $scope.obtenerDireccionComercio = function () {
+        $http.get('https://maps.googleapis.com/maps/api/geocode/json?address='
+        + $scope.alturaComercio + '+'
+        + $scope.calleComercio + ',+'
+        + $scope.ciudadComercio +
+        ',+cordoba'+
+        '&key=AIzaSyDWm21zrmC4NZfNez65rFSmHrugggF5rAY')
+
+        .then(function (respuesta) {
+            console.log(respuesta.data.results[0].geometry.location)
+        })
+    }
+
     $scope.cargarImagen = function () {
         if (window.FileReader) {
             document.getElementById('upload-photo').addEventListener('change', handleFileSelect, false);
@@ -14,7 +41,7 @@ app.controller("myCtrl", function ($scope) {
 
                 reader.onload = (function (theFile) {
                     return function (e) {
-                        document.getElementById('list').innerHTML = ['<img src="', e.target.result, '" title="', theFile.name, '" width="300" />'].join('');
+                        document.getElementById('contImg').innerHTML = ['<img src="', e.target.result, '" title="', theFile.name, '" width="100px" />'].join('');
                     };
                 })(f);
 
@@ -26,4 +53,5 @@ app.controller("myCtrl", function ($scope) {
         }
     }
     $scope.cargarImagen();
+
 });

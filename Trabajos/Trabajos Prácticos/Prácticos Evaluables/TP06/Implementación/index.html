@@ -40,7 +40,9 @@
         <label class="button-Select" for="upload-photo">Adjuntar imagen
         </label>
         <input type="file" name="photo" id="upload-photo" accept="image/jpeg" />
-		<output id="list"></output>
+
+        <div id="contImg">
+        </div>
 
       </div>
 
@@ -50,18 +52,24 @@
 
 
     <label for="" >Calle</label>
+<<<<<<< HEAD
     <input type="text" name="" value="" required>
 
     <label for="" class="">Altura</label>
     <input type="text" name="" value="" required pattern="^[0-9]*$">
+=======
+    <input type="text" name="" value="" ng-model="calleComercio" ng-required>
+
+    <label for="" class="">Altura</label>
+    <input type="text" name="" value="" ng-model="alturaComercio" ng-required>
+>>>>>>> 524cf127385acb9e4e9e8508be654e5a0d76ae32
 
     <div class="form-group">
     <label for="" class="">Ciudad</label>
-    <select class="custom-select" style="width: 200px;" ng-required>
-      <option selected>Seleccionar ciudad</option>
-      <option value="1">Córdoba</option>
-      <option value="2">Villa Carlos Paz</option>
-      <option value="3">Río Cuarto</option>
+    <select class="custom-select" style="width: 200px;" ng-model="ciudadComercio" ng-required>
+      <option value="Cordoba">Córdoba</option>
+      <option value="Villa Carlos Paz">Villa Carlos Paz</option>
+      <option value="Rio Cuarto">Río Cuarto</option>
     </select>
     </div>
 
@@ -74,6 +82,25 @@
       <div class="block-form">
         <h1>Dirección de entrega</h1>
         <h3>Lugar exacto donde lo recibirás</h3>
+
+        <label for="" >Calle</label>
+        <input type="text" name="" value="" ng-required>
+
+        <label for="" class="">Altura</label>
+        <input type="text" name="" value="" ng-required>
+
+        <div class="form-group">
+        <label for="" class="">Ciudad</label>
+        <select class="custom-select" style="width: 200px;" ng-required>
+          <option selected>Seleccionar ciudad</option>
+          <option value="1">Córdoba</option>
+          <option value="2">Villa Carlos Paz</option>
+          <option value="3">Río Cuarto</option>
+        </select>
+        </div>
+
+        <label for="" class="">Referencia (opcional)</label>
+        <textarea name="name" rows="8" ng-model="referenciaOpcional"></textarea>
       </div>
 
       <div class="block-form">
@@ -119,7 +146,7 @@
 
       </div>
 
-        <div class="button-Select enviar" ng-model="enviarPedido" ng-disabled="!formLoQueSea.$invalid">Enviar pedido
+        <div class="button-Select enviar" ng-model="enviarPedido" ng-disabled="!formLoQueSea.$invalid" ng-click="obtenerCoordenadasComercio()" >Enviar pedido
         </div>
 
 
