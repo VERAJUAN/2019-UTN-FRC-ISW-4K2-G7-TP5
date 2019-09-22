@@ -50,10 +50,10 @@
 
 
     <label for="" >Calle</label>
-    <input type="text" name="" value="" ng-required>
+    <input type="text" name="" value="" required>
 
     <label for="" class="">Altura</label>
-    <input type="text" name="" value="" ng-required>
+    <input type="text" name="" value="" required pattern="^[0-9]*$">
 
     <div class="form-group">
     <label for="" class="">Ciudad</label>
@@ -101,20 +101,20 @@
         </div>
         <div class="formAdicional" ng-show="metodoPago == 'E'">
           <label for="" class="">Monto con el que vas abonar</label>
-          <input style="width: 76px" type="text" name="" value="">
+          <input style="width: 76px" type="text" name="" value="" pattern=^[1-9]\d*$>
         </div>
         <div ng-class="{'button-Select' : 'true', 'border' : metodoPago == 'T'}" ng-model="metodoTarjeta" ng-click="metodoPago='T'">Tarjeta VISA
         </div>
 
         <div class="formAdicional" ng-show="metodoPago == 'T'">
           <label for="" >Número de tarjeta</label>
-          <input type="text" name="" value="" ng-required>
+          <input type="text" name="num_tarjeta" value="" required pattern="^4[0-9]{12}(?:[0-9]{3})?$">
           <label for="" >Nombre y apellido del titular</label>
           <input type="text" name="" value="" ng-required>
           <label for="" class="">Fecha de vencimiento</label>
-          <input style="width: 100px" placeholder="mm/yy"type="text" name="" value="" ng-required>
+          <input style="width: 100px" placeholder="mm/yy"type="text" name="" value="" required pattern="(0[1-9]|1[012]).[0-9]{4}">
           <label for="" class="">Código de seguridad</label>
-          <input style="width: 100px" type="text" name="" value="" ng-required>
+          <input style="width: 100px" type="text" name="" value="" required pattern="[0-9]\d\d">
         </div>
 
       </div>
