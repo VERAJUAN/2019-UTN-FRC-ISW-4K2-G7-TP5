@@ -88,3 +88,11 @@ label.button-Select{
   	position: absolute;
   	z-index: -1;
 }
+
+.formProgramar{
+  margin-top: 20px;
+}
+
+.button-Select.enviar.ng-disabled{
+  background-color: grey;
+}

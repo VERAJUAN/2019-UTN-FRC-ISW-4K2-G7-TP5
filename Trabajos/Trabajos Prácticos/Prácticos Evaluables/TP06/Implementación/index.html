@@ -47,32 +47,24 @@
         <h3>Lugar exacto donde el cadete lo busca</h3>
 
 
-  <label for="" >Calle</label>
-  <input type="text" name="" value="" ng-required>
+    <label for="" >Calle</label>
+    <input type="text" name="" value="" ng-required>
 
-  <label for="" class="">Altura</label>
-  <input type="text" name="" value="" ng-required>
+    <label for="" class="">Altura</label>
+    <input type="text" name="" value="" ng-required>
 
-  <div class="form-group">
-  <label for="" class="">Ciudad</label>
-  <select class="custom-select" style="width: 200px;" ng-required>
-    <option selected>Seleccionar ciudad</option>
-    <option value="1">Córdoba</option>
-    <option value="2">Villa Carlos Paz</option>
-    <option value="3">Río Cuarto</option>
-  </select>
-  </div>
+    <div class="form-group">
+    <label for="" class="">Ciudad</label>
+    <select class="custom-select" style="width: 200px;" ng-required>
+      <option selected>Seleccionar ciudad</option>
+      <option value="1">Córdoba</option>
+      <option value="2">Villa Carlos Paz</option>
+      <option value="3">Río Cuarto</option>
+    </select>
+    </div>
 
-  <label for="" class="">Referencia (opcional)</label>
-  <textarea name="name" rows="8" ng-model="referenciaOpcional"></textarea>
-
-
-
-
-
-
-
-
+    <label for="" class="">Referencia (opcional)</label>
+    <textarea name="name" rows="8" ng-model="referenciaOpcional"></textarea>
 
     </div>
 
@@ -89,18 +81,27 @@
         </div>
         <div ng-class="{'button-Select' : 'true', 'border' : momentoEntrega == 'P'}" ng-model="momentoProgramado" ng-click="momentoEntrega='P'">Programar hora
         </div>
+        <div class="formProgramar" ng-show="momentoEntrega == 'P'">
+          <label for="" class="">Hora</label>
+          <input type="time" name="" value="" class="border" ng-required>
+
+          <label for="" class="">Fecha</label>
+          <input type="date" name="" value="" class="border" ng-required>
+        </div>
+
+
       </div>
 
       <div class="block-form">
         <h1>Datos de pago</h1>
         <h3>¿Cómo deseas pagarlo?</h3>
-        <div ng-class="{'button-Select' : 'true', 'border' : metodoPago == 'T'}" ng-model="metodoTarjeta" ng-click="metodoPago='T'">Tarjeta VISA
-        </div>
         <div ng-class="{'button-Select' : 'true', 'border' : metodoPago == 'E'}" ng-model="metodoEfectivo" ng-click="metodoPago='E'">Efectivo
+        </div>
+        <div ng-class="{'button-Select' : 'true', 'border' : metodoPago == 'T'}" ng-model="metodoTarjeta" ng-click="metodoPago='T'">Tarjeta VISA
         </div>
       </div>
 
-        <div class="button-Select enviar" ng-model="enviarPedido" ng-disabled="formLoQueSea.$invalid">Enviar pedido
+        <div class="button-Select enviar" ng-model="enviarPedido" ng-disabled="!formLoQueSea.$invalid">Enviar pedido
         </div>
 
 
