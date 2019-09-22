@@ -3,27 +3,36 @@
   <head>
     <meta charset="utf-8">
     <script type="text/javascript" src="js/angular.min.js"/></script>
-    <link href="https://unpkg.com/basscss@8.0.2/css/basscss.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/styles.css">
     <title>Pedir Lo que sea</title>
   </head>
   <body ng-app="myApp" ng-controller="myCtrl">
-    <div class="header">
-        <img src=""/>
-    </div>
-    <div class="title">
-      Pedir lo que sea
-      </div>
-     <div class="sm-col sm-col-12">
-    <form class="" name="formLoQueSea">
 
-      <div class="block-form">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-sm-12 header">
+            <img src=""/>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12 title">
+          Pedir lo que sea
+        </div>
+      </div>
+
+    <form name="formLoQueSea">
+
+      <div class="form-group block-form">
         <h1>Detalle de pedido</h1>
         <h3>¿Qué necesitas?</h3>
         <textarea name="name" rows="8" ng-model="detallePedido"></textarea>
       </div>
 
-      <div class="block-form">
+      <div class="form-group block-form">
         <h1>Foto del artículo (opcional)</h1>
         <h3>Para guiar al cadete</h3>
 
@@ -36,11 +45,37 @@
       <div class="block-form">
         <h1>Dirección del comercio</h1>
         <h3>Lugar exacto donde el cadete lo busca</h3>
-        <div class="button-Select">Describir dirección
-        </div>
-        <div class="button-Select">Ubicar en mapa
-        </div>
-      </div>
+
+
+  <label for="" >Calle</label>
+  <input type="text" name="" value="" ng-required>
+
+  <label for="" class="">Altura</label>
+  <input type="text" name="" value="" ng-required>
+
+  <div class="form-group">
+  <label for="" class="">Ciudad</label>
+  <select class="custom-select" style="width: 200px;" ng-required>
+    <option selected>Seleccionar ciudad</option>
+    <option value="1">Córdoba</option>
+    <option value="2">Villa Carlos Paz</option>
+    <option value="3">Río Cuarto</option>
+  </select>
+  </div>
+
+  <label for="" class="">Referencia (opcional)</label>
+  <textarea name="name" rows="8" ng-model="referenciaOpcional"></textarea>
+
+
+
+
+
+
+
+
+
+    </div>
+
 
       <div class="block-form">
         <h1>Dirección de entrega</h1>

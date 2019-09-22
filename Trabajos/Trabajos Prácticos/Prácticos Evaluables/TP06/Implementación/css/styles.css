@@ -8,7 +8,8 @@
 }
 
 .block-form h1,
-.block-form h3{
+.block-form h3,
+.block-form label{
   margin-left: 12px
 }
 
@@ -20,22 +21,24 @@
   font-size: 14px
 }
 
+.block-form textarea,
+.block-form input[type=text]{
+  margin: 10px;
+  outline: none;
+  border: 1px solid #c1c1c1;
+  resize: none;
+  border-radius: 6px;
+  padding: 7px;
+}
+
 .block-form textarea{
   width: calc(100% - 62px);
-  margin: 10px;
+  height: 100px;
+  padding: 20px;
+}
 
-
-height: 100px;
-
-outline: none;
-
-border: 1px solid #c1c1c1;
-
-resize: none;
-
-border-radius: 6px;
-
-padding: 20px;
+.block-form label{
+  margin-r
 }
 
 .title{
@@ -72,8 +75,8 @@ label.button-Select{
 
 .border{
   background-color: #e9e9e9;
-  border-style: solid;
-  border-color: #c43ac4;
+  border-style: solid !important;
+  border-color: #c43ac4 !important;
   border-radius: 10px;
 }
 
