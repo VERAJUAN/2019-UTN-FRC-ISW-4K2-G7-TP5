@@ -54,4 +54,8 @@ app.controller("myCtrl", function($scope,$http) {
     }
     $scope.cargarImagen();
 
+    $scope.enviarPedido = function () {
+        window.alert("formulario enviado");
+    }
+
 });
