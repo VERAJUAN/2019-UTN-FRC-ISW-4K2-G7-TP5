@@ -108,9 +108,9 @@
           Obligatorio</h6>
 
         <label for="" class="">Altura</label>
-        <input type="text" name="alturaEntrega" value="" ng-model="alturaEntrega" required>
+        <input type="text" name="alturaEntrega" value="" ng-model="alturaEntrega" required pattern="^[0-9]*$">
         <h6 style="color:red" ng-show="formLoQueSea.alturaEntrega.$touched && formLoQueSea.alturaEntrega.$invalid">
-          Obligatorio</h6>
+          Obligatorio - Solo números</h6>
 
         <div class="form-group">
           <label for="" class="">Ciudad</label>
@@ -137,7 +137,7 @@
         <div ng-class="{'button-Select' : 'true', 'border' : momentoEntrega == 'P'}" ng-model="momentoProgramado"
           ng-click="momentoEntrega='P'">Programar hora
         </div>
-        <div class="formAdicional" ng-show="momentoEntrega == 'P'">
+        <div class="formAdicional" ng-if="momentoEntrega == 'P'">
           <label for="" class="">Hora</label>
           <input type="time" name="hora" ng-model="hora" value="" class="border" required>
 
@@ -157,7 +157,7 @@
         <div ng-class="{'button-Select' : 'true', 'border' : metodoPago == 'E'}" ng-model="metodoEfectivo"
           ng-click="metodoPago='E'">Efectivo
         </div>
-        <div class="formAdicional" ng-show="metodoPago == 'E'">
+        <div class="formAdicional" ng-if="metodoPago == 'E'">
           <label for="" class="">Monto con el que vas abonar</label>
           <input style="width: 76px" type="text" name="montoEfectivo" ng-model="montoEfectivo" value="" required pattern=^[1-9]\d*$>
           <h6 style="color:red" ng-show="(metodoPago == 'E') && formLoQueSea.montoEfectivo.$invalid">
@@ -167,33 +167,35 @@
           ng-click="metodoPago='T'">Tarjeta VISA
         </div>
 
-        <div class="formAdicional" ng-show="metodoPago == 'T'">
+        <div class="formAdicional" ng-if="metodoPago == 'T'">
           <label for="">Número de tarjeta</label>
           <input type="text" ng-model="num_tarjeta" name="num_tarjeta" value="" required pattern="^4[0-9]{12}(?:[0-9]{3})?$">
-          <h6 style="color:red" ng-show="(metodoPago == 'T') && formLoQueSea.num_tarjeta.$invalid">
+          <h6 style="color:red" ng-show="(metodoPago == 'T') && formLoQueSea.num_tarjeta.$invalid && formLoQueSea.num_tarjeta.$dirty">
             Incorrecto</h6>
           <label for="">Nombre y apellido del titular</label>
           <input type="text" name="n_a_titular" ng-model="n_a_titular" value="" required>
-          <h6 style="color:red" ng-show="(metodoPago == 'T') && formLoQueSea.n_a_titular.$invalid">
+          <h6 style="color:red" ng-show="(metodoPago == 'T') && formLoQueSea.n_a_titular.$invalid && formLoQueSea.n_a_titular.$dirty">
             Obligatorio</h6>
           <label for="" class="">Fecha de vencimiento</label>
           <input style="width: 100px" placeholder="mm/yyyy" type="text" name="fecha_nac" ng-model="fecha_nac" value="" required
             pattern="(0[1-9]|1[012]).[0-9]{4}">
-            <h6 style="color:red" ng-show="(metodoPago == 'T') && formLoQueSea.fecha_nac.$invalid">
+            <h6 style="color:red" ng-show="(metodoPago == 'T') && formLoQueSea.fecha_nac.$invalid &&formLoQueSea.fecha_nac.$dirty">
               Incorrecto</h6>
           <label for="" class="">Código de seguridad</label>
           <input style="width: 100px" type="text" name="cod_seg" ng-model="cod_seg" value="" required pattern="[0-9]\d\d">
-          <h6 style="color:red" ng-show="(metodoPago == 'T') && formLoQueSea.cod_seg.$invalid">
+          <h6 style="color:red" ng-show="(metodoPago == 'T') && formLoQueSea.cod_seg.$invalid && formLoQueSea.cod_seg.$dirty">
             Incorrecto</h6>
         </div>
 
       </div>
+	  
+	  <label  ng-show="formLoQueSea.$invalid && formLoQueSea.$dirty" style=color:red>Datos faltantes o incorrectos.Por favor revise los campos</label>
 
-      <div class="button-Select enviar" ng-model="enviarPedido" ng-disabled="!formLoQueSea.$invalid"
+      <div class="button-Select enviar" type="submit"ng-model="enviarPedido"ng-disabled="formLoQueSea.$invalid"
         ng-click="obtenerCoordenadasComercio()">Enviar pedido
       </div>
-
-      <input type="submit" ng-disabled="formLoQueSea.$invalid">
+	  
+      
 
     </form>
   </div>
