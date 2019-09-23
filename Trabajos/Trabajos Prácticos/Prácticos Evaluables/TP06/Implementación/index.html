@@ -79,10 +79,8 @@
 
         <div class="form-group">
           <label for="" class="">Ciudad</label>
-          <select class="custom-select" style="width: 200px;" name="ciudadComercio" ng-model="ciudadComercio" required>
-            <option value="Cordoba">Córdoba</option>
-            <option value="Villa Carlos Paz">Villa Carlos Paz</option>
-            <option value="Rio Cuarto">Río Cuarto</option>
+          <select class="form-control" ng-model="locSelectedComercio">
+                   <option ng-selected="locSelectedComercio == localidad" ng-repeat="localidad in localidades" ng-value="localidad">{{localidad}}</option>
           </select>
           <h6 style="color:red" ng-show="formLoQueSea.ciudadComercio.$error.required && formLoQueSea.$submitted">
             Obligatorio</h6>
@@ -114,12 +112,11 @@
 
         <div class="form-group">
           <label for="" class="">Ciudad</label>
-          <select class="custom-select" style="width: 200px;" name="ciudadEntrega" ng-model="ciudadEntrega" required>
-            <option selected>Seleccionar ciudad</option>
-            <option value="1">Córdoba</option>
-            <option value="2">Villa Carlos Paz</option>
-            <option value="3">Río Cuarto</option>
+
+          <select class="form-control" ng-model="locSelectedEntrega">
+                   <option ng-selected="locSelectedEntrega == localidad" ng-repeat="localidad in localidades" ng-value="localidad">{{localidad}}</option>
           </select>
+
           <h6 style="color:red" ng-show="formLoQueSea.ciudadEntrega.$error.required && formLoQueSea.$submitted">
             Obligatorio</h6>
         </div>
@@ -188,61 +185,17 @@
         </div>
 
       </div>
-	  
-	  <label  ng-show="formLoQueSea.$invalid && formLoQueSea.$dirty" style=color:red>Datos faltantes o incorrectos.Por favor revise los campos</label>
 
-      <div class="button-Select enviar" type="submit"ng-model="enviarPedido"ng-disabled="formLoQueSea.$invalid"
-        ng-click="obtenerCoordenadasComercio()">Enviar pedido
+
+      <div class="button-Select enviar" type="submit"ng-model="enviarPedido" ng-disabled="formLoQueSea.$invalid && formLoQueSea.$dirty">Enviar pedido
       </div>
-	  
-      
+
+
 
     </form>
   </div>
 
   <script type="text/javascript" src="js/app.js"></script>
-
-  <script>
-
-    var marker = null;
-    var infowindow = null;
-
-    function myMap() {
-      var mapProp = {
-        center: new google.maps.LatLng(-31.42008329999999, -64.1887761),
-        zoom: 17,
-      };
-      var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
-
-      google.maps.event.addListener(map, 'click', function (event) {
-        placeMarker(map, event.latLng);
-      });
-
-    }
-
-    function placeMarker(map, location) {
-      if (marker == null) {
-        marker = new google.maps.Marker({
-          position: location,
-          map: map
-        });
-        infowindow = new google.maps.InfoWindow({
-          content: 'Latitude: ' + location.lat() +
-            '<br>Longitude: ' + location.lng()
-        });
-        infowindow.open(map, marker);
-      }
-      else {
-        marker.setPosition(location);
-        infowindow.setContent('Latitude: ' + location.lat() +
-          '<br>Longitude: ' + location.lng());
-      }
-    }
-
-  </script>
-
-
-
   <script
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWm21zrmC4NZfNez65rFSmHrugggF5rAY&callback=myMap"></script>
 
