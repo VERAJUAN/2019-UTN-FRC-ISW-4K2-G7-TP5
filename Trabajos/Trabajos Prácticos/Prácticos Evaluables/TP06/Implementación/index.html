@@ -142,8 +142,8 @@
           <input type="date" name="fecha" ng-model="fecha" value="" class="border" required>
         </div>
 
-        <h6 style="color:red" ng-show="(momentoEntrega == 'P') && (formLoQueSea.hora.$error.required || formLoQueSea.fecha.$error.required)">
-          Obligatorio</h6>
+        <h6 style="color:red" ng-show="(momentoEntrega == 'P') && ((formLoQueSea.hora.$invalid || formLoQueSea.fecha.$invalid)&&(formLoQueSea.fecha.$dirty || formLoQueSea.hora.$dirty))">
+          Debe ingresar una fecha y hora valida</h6>
 
 
       </div>
@@ -157,8 +157,8 @@
         <div class="formAdicional" ng-if="metodoPago == 'E'">
           <label for="" class="">Monto con el que vas abonar</label>
           <input style="width: 76px" type="text" name="montoEfectivo" ng-model="montoEfectivo" value="" required pattern=^[1-9]\d*$>
-          <h6 style="color:red" ng-show="(metodoPago == 'E') && formLoQueSea.montoEfectivo.$invalid">
-            Obligatorio</h6>
+          <h6 style="color:red" ng-show="(metodoPago == 'E') && formLoQueSea.montoEfectivo.$invalid && formLoQueSea.montoEfectivo.$dirty">
+            Ingrese un monto valido</h6>
         </div>
         <div ng-class="{'button-Select' : 'true', 'border' : metodoPago == 'T'}" ng-model="metodoTarjeta"
           ng-click="metodoPago='T'">Tarjeta VISA
