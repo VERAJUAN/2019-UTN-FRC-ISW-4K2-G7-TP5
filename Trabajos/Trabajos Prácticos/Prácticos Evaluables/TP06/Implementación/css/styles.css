@@ -128,3 +128,17 @@ label.button-Select{
 .button-Select.enviar.ng-disabled{
   background-color: grey;
 }
+
+.enviado{
+  position: absolute;
+  top: 73%;
+  left: 50%;
+  margin-left: -133px;
+  margin-top: -150px;
+  padding: 5px;
+  font-size: 21px;
+}
+
+.enviado img{
+  width: 100px;
+}

@@ -24,7 +24,7 @@
 
 <body ng-app="LoQueSeaModule" ng-controller="LoQueSeaController">
 
-  <div class="container" ng-show="!pedidoEnviado">
+  <div class="container" ng-show="!pedidoEnviado" ng-show="!pedidoEnviado">
 
     <div class="row">
       <div class="col-sm-12 header">
@@ -198,6 +198,10 @@
       </div>
     </div>
 
+  </div>
+
+  <div class="enviado" ng-show="pedidoEnviado">
+        PEDIDO ENVIADO <img src="img/check.jpg" alt="">
   </div>
 
   <script

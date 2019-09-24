@@ -19,6 +19,7 @@ function LoQueSeaController($scope,$http){
     $scope.placeMarker = placeMarker;
     $scope.cargarImagen = cargarImagen;
     $scope.enviarPedido = enviarPedido;
+    $scope.pedidoEnviado = false;
 
     $scope.myMap();
     $scope.cargarImagen();
@@ -137,6 +138,7 @@ function LoQueSeaController($scope,$http){
     }
 
     function enviarPedido() {
+      $scope.pedidoEnviado = true;
         alert("Pedido enviado");
     }
 
