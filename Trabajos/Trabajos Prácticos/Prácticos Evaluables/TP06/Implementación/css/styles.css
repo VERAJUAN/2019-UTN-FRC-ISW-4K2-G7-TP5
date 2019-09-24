@@ -93,6 +93,14 @@ label.button-Select{
 
 }
 
+.button-Select.enviar[disabled]{
+  background-color: grey;
+  color: #fff;
+  margin-bottom: 25px;
+  font-size: 25px;
+
+}
+
 .button-Select.enviar .ng-disabled{
   background-color: grey;
   color: #fff;
