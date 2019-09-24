@@ -31,15 +31,16 @@ function LoQueSeaController($scope,$http){
         $http.get('https://maps.googleapis.com/maps/api/geocode/json?address='
         + $scope.alturaComercio + '+'
         + $scope.calleComercio + ',+'
-        + $scope.ciudadComercio +
+        + $scope.locSelectedComercio +
         ',+cordoba'+
-        '&key=YOURAPIKEY')
+        '&key=')
 
         .then(function (respuesta) {
             $scope.lat = respuesta.data.results[0].geometry.location.lat;
             $scope.lng = respuesta.data.results[0].geometry.location.lng;
             $scope.reverseGeocoding = false;
             $scope.myMap();
+            console.log(respuesta);
         })
     }
 
@@ -47,7 +48,7 @@ function LoQueSeaController($scope,$http){
         $http.get('https://maps.googleapis.com/maps/api/geocode/json?latlng='
         + $scope.lat + ','
         + $scope.lng + '+'
-        + '&key=YOURAPIKEY')
+        + '&key=')
 
         .then(function (respuesta) {
           if (respuesta.data.results[0].address_components[0].types[0] == "street_number") {
@@ -67,6 +68,8 @@ function LoQueSeaController($scope,$http){
           }else if (respuesta.data.results[0].address_components[2].types[0] == "locality") {
             $scope.locSelectedComercio = respuesta.data.results[0].address_components[2].long_name;
           }
+            console.log(respuesta);
+
         })
     }
 
@@ -86,7 +89,6 @@ function LoQueSeaController($scope,$http){
       if($scope.reverseGeocoding == false){
         $scope.marker = null;
         $scope.latLng = {'lat':$scope.lat, 'lng':$scope.lng};
-        console.log($scope.latLng);
         $scope.placeMarker(map, $scope.latLng);
       }
     }

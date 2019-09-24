@@ -79,8 +79,8 @@
 
         <div class="form-group">
           <label for="" class="">Ciudad</label>
-          <select class="form-control" ng-model="locSelectedComercio">
-                   <option ng-selected="locSelectedComercio == localidad" ng-click="obtenerCoordenadasComercio()" ng-repeat="localidad in localidades" ng-value="localidad">{{localidad}}</option>
+          <select class="form-control" ng-model="locSelectedComercio" ng-change="obtenerCoordenadasComercio()">
+                   <option  ng-selected="locSelectedComercio == localidad" ng-click="obtenerCoordenadasComercio()" ng-repeat="localidad in localidades" ng-value="localidad">{{localidad}}</option>
           </select>
           <h6 style="color:red" ng-show="formLoQueSea.ciudadComercio.$error.required && formLoQueSea.$submitted">
             Obligatorio</h6>
@@ -205,7 +205,7 @@
   </div>
 
   <script
-    src="https://maps.googleapis.com/maps/api/js?key=YOURAPIKEY&callback=myMap"></script>
+    src="https://maps.googleapis.com/maps/api/js?key=&callback=myMap"></script>
 
 </body>
 
