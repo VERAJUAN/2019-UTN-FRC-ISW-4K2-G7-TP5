@@ -137,9 +137,7 @@ function LoQueSeaController($scope,$http){
     }
 
     function enviarPedido() {
-        window.alert("formulario enviado");
+        console.log("asdasd");
     }
-
-
 
 };

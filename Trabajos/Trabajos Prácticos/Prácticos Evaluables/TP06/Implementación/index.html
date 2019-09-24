@@ -38,7 +38,7 @@
       </div>
     </div>
 
-    <form name="formLoQueSea" ng-model="formLoQueSea" ng-submit="enviarPedido()">
+    <form name="formLoQueSea" ng-model="formLoQueSea">
 
       <div class="form-group block-form">
         <h1>Detalle de pedido</h1>
@@ -92,7 +92,7 @@
         </div>
 
         <label for="" class="">Referencia (opcional)</label>
-        <textarea name="name" rows="8" ng-model="referenciaOpcional"></textarea>
+        <textarea name="name" rows="8" ng-model="referenciaOpcComercio"></textarea>
 
       </div>
 
@@ -122,7 +122,7 @@
         </div>
 
         <label for="" class="">Referencia (opcional)</label>
-        <textarea name="name" rows="8" ng-model="referenciaOpcional"></textarea>
+        <textarea name="name" rows="8" ng-model="referenciaOpcEntrega"></textarea>
       </div>
 
       <div class="block-form">
@@ -136,10 +136,10 @@
         </div>
         <div class="formAdicional" ng-if="momentoEntrega == 'P'">
           <label for="" class="">Hora</label>
-          <input type="time" name="hora" ng-model="hora" value="" class="border" required>
+          <input type="time" name="hora" ng-model="hora" value="" class="border" ng-required="momentoEntrega == 'P'">
 
           <label for="" class="">Fecha</label>
-          <input type="date" name="fecha" ng-model="fecha" value="" class="border" required>
+          <input type="date" name="fecha" ng-model="fecha" value="" class="border" ng-required="momentoEntrega == 'P'">
         </div>
 
         <h6 style="color:red" ng-show="(momentoEntrega == 'P') && ((formLoQueSea.hora.$invalid || formLoQueSea.fecha.$invalid)&&(formLoQueSea.fecha.$dirty || formLoQueSea.hora.$dirty))">
@@ -156,7 +156,7 @@
         </div>
         <div class="formAdicional" ng-if="metodoPago == 'E'">
           <label for="" class="">Monto con el que vas abonar</label>
-          <input style="width: 76px" type="text" name="montoEfectivo" ng-model="montoEfectivo" value="" required pattern=^[1-9]\d*$>
+          <input style="width: 76px" type="text" name="montoEfectivo" ng-required="metodoPago == 'E'" ng-model="montoEfectivo" value=""  pattern=^[1-9]\d*$>
           <h6 style="color:red" ng-show="(metodoPago == 'E') && formLoQueSea.montoEfectivo.$invalid && formLoQueSea.montoEfectivo.$dirty">
             Ingrese un monto valido</h6>
         </div>
@@ -166,28 +166,29 @@
 
         <div class="formAdicional" ng-if="metodoPago == 'T'">
           <label for="">Número de tarjeta</label>
-          <input type="text" ng-model="num_tarjeta" name="num_tarjeta" value="" required pattern="^4[0-9]{12}(?:[0-9]{3})?$">
+          <input type="text" ng-model="num_tarjeta" name="num_tarjeta" value="" ng-required="metodoPago == 'T'"  pattern="^4[0-9]{12}(?:[0-9]{3})?$">
           <h6 style="color:red" ng-show="(metodoPago == 'T') && formLoQueSea.num_tarjeta.$invalid && formLoQueSea.num_tarjeta.$dirty">
             Incorrecto</h6>
           <label for="">Nombre y apellido del titular</label>
-          <input type="text" name="n_a_titular" ng-model="n_a_titular" value="" required>
+          <input type="text" name="n_a_titular" ng-model="n_a_titular" ng-required="metodoPago == 'T'" value="" >
           <h6 style="color:red" ng-show="(metodoPago == 'T') && formLoQueSea.n_a_titular.$invalid && formLoQueSea.n_a_titular.$dirty">
             Obligatorio</h6>
           <label for="" class="">Fecha de vencimiento</label>
-          <input style="width: 100px" placeholder="mm/yyyy" type="text" name="fecha_nac" ng-model="fecha_nac" value="" required
+          <input style="width: 100px" placeholder="mm/yyyy" type="text" name="fecha_nac" ng-required="metodoPago == 'T'" ng-model="fecha_nac" value=""
             pattern="(0[1-9]|1[012]).[0-9]{4}">
             <h6 style="color:red" ng-show="(metodoPago == 'T') && formLoQueSea.fecha_nac.$invalid &&formLoQueSea.fecha_nac.$dirty">
               Incorrecto</h6>
           <label for="" class="">Código de seguridad</label>
-          <input style="width: 100px" type="text" name="cod_seg" ng-model="cod_seg" value="" required pattern="[0-9]\d\d">
+          <input style="width: 100px" type="text" name="cod_seg" ng-model="cod_seg" value="" ng-required="metodoPago == 'T'"  pattern="[0-9]\d\d">
           <h6 style="color:red" ng-show="(metodoPago == 'T') && formLoQueSea.cod_seg.$invalid && formLoQueSea.cod_seg.$dirty">
             Incorrecto</h6>
         </div>
 
       </div>
 
-      <div class="button-Select enviar" type="submit"ng-model="enviarPedido" ng-disabled="formLoQueSea.$invalid && formLoQueSea.$dirty">Enviar pedido
-      </div>
+      <button class="button-Select enviar" type="submit" ng-click="enviarPedido()" ng-model="btnEnviar">
+        Enviar pedido
+      </button>
 
     </form>
 

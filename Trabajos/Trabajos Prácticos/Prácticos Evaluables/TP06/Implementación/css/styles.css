@@ -83,16 +83,17 @@
 label.button-Select{
   display: inline-block;
   width: calc(100% - 114px);
-  font-size: 25px;
 }
 
 .button-Select.enviar{
   background-color: #c43ac4;
   color: #fff;
-  margin-bottom: 25px
+  margin-bottom: 25px;
+  font-size: 25px;
+
 }
 
-.button-Select.enviar  .ng-disabled{
+.button-Select.enviar .ng-disabled{
   background-color: grey;
   color: #fff;
   margin-bottom: 25px
