@@ -8,6 +8,9 @@ app.controller("myCtrl", function($scope,$http) {
     $scope.localidades = ['Córdoba','Villa Carlos Paz','Río Cuarto'];
     $scope.locSelectedComercio = 'Córdoba';
     $scope.locSelectedEntrega = 'Córdoba';
+    $scope.reverseGeocoding = true;
+    $scope.lat = -31.42008329999999;
+    $scope.lng = -64.1887761;
 
 
     $scope.obtenerCoordenadasComercio = function () {
@@ -16,11 +19,13 @@ app.controller("myCtrl", function($scope,$http) {
         + $scope.calleComercio + ',+'
         + $scope.ciudadComercio +
         ',+cordoba'+
-        '&key=AIzaSyDWm21zrmC4NZfNez65rFSmHrugggF5rAY')
+        '&key=YOURAPIKEY')
 
         .then(function (respuesta) {
             $scope.lat = respuesta.data.results[0].geometry.location.lat;
             $scope.lng = respuesta.data.results[0].geometry.location.lng;
+            $scope.reverseGeocoding = false;
+            $scope.myMap();
         })
     }
 
@@ -28,7 +33,7 @@ app.controller("myCtrl", function($scope,$http) {
         $http.get('https://maps.googleapis.com/maps/api/geocode/json?latlng='
         + $scope.lat + ','
         + $scope.lng + '+'
-        + '&key=AIzaSyDWm21zrmC4NZfNez65rFSmHrugggF5rAY')
+        + '&key=YOURAPIKEY')
         .then(function (respuesta) {
           if (respuesta.data.results[0].address_components[0].types[0] == "street_number") {
             $scope.alturaComercio = respuesta.data.results[0].address_components[0].long_name
@@ -49,21 +54,29 @@ app.controller("myCtrl", function($scope,$http) {
           }
 
 
-            console.log($scope.locSelectedComercio)
-            console.log(respuesta.data)
         })
     }
 
     $scope.myMap = function(){
       var mapProp = {
-        center: new google.maps.LatLng(-31.42008329999999, -64.1887761),
+        center: new google.maps.LatLng($scope.lat, $scope.lng),
         zoom: 17,
       };
+
       var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
 
       google.maps.event.addListener(map, 'click', function (event) {
         $scope.placeMarker(map, event.latLng);
+        console.log($scope.reverseGeocoding);
       });
+
+      if($scope.reverseGeocoding == false){
+        $scope.marker = null;
+        $scope.latLng = {'lat':$scope.lat, 'lng':$scope.lng}
+        console.log($scope.latLng);
+        $scope.placeMarker(map, $scope.latLng);
+      }
+
 
     }
 
@@ -74,17 +87,24 @@ app.controller("myCtrl", function($scope,$http) {
           map: map
         });
 
-        $scope.lat = location.lat()
-        $scope.lng = location.lng()
-        $scope.obtenerDireccionComercio()
+        if ($scope.reverseGeocoding == true) {
+          $scope.lat = location.lat()
+          $scope.lng = location.lng()
+          $scope.obtenerDireccionComercio()
+        }else {
+          $scope.reverseGeocoding = true;
+        }
 
 
-      }
-      else {
+      }else {
         $scope.marker.setPosition(location);
-        $scope.lat = location.lat()
-        $scope.lng = location.lng()
-        $scope.obtenerDireccionComercio()
+        if ($scope.reverseGeocoding == true) {
+          $scope.lat = location.lat()
+          $scope.lng = location.lng()
+          $scope.obtenerDireccionComercio()
+        }else {
+          $scope.reverseGeocoding = true;
+        }
 
       }
     }

@@ -67,12 +67,12 @@
 
 
         <label for="">Calle</label>
-        <input type="text" name="calleComercio" value="" ng-model="calleComercio" required>
+        <input type="text" name="calleComercio" value="" ng-model="calleComercio" ng-keyup="obtenerCoordenadasComercio()" required>
         <h6 style="color:red" ng-show="formLoQueSea.calleComercio.$touched && formLoQueSea.calleComercio.$invalid">
           Obligatorio</h6>
 
         <label for="" class="">Altura</label>
-        <input type="text" name="alturaComercio" value="" ng-model="alturaComercio" required pattern="^[0-9]*$">
+        <input type="text" name="alturaComercio" value="" ng-model="alturaComercio" ng-keyup="obtenerCoordenadasComercio()" required pattern="^[0-9]*$">
         <h6 style="color:red" ng-show="formLoQueSea.alturaComercio.$touched && formLoQueSea.alturaComercio.$invalid">
           Obligatorio - Solo números</h6>
 
@@ -80,7 +80,7 @@
         <div class="form-group">
           <label for="" class="">Ciudad</label>
           <select class="form-control" ng-model="locSelectedComercio">
-                   <option ng-selected="locSelectedComercio == localidad" ng-repeat="localidad in localidades" ng-value="localidad">{{localidad}}</option>
+                   <option ng-selected="locSelectedComercio == localidad" ng-click="obtenerCoordenadasComercio()" ng-repeat="localidad in localidades" ng-value="localidad">{{localidad}}</option>
           </select>
           <h6 style="color:red" ng-show="formLoQueSea.ciudadComercio.$error.required && formLoQueSea.$submitted">
             Obligatorio</h6>
@@ -197,7 +197,7 @@
 
   <script type="text/javascript" src="js/app.js"></script>
   <script
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWm21zrmC4NZfNez65rFSmHrugggF5rAY&callback=myMap"></script>
+    src="https://maps.googleapis.com/maps/api/js?key=YOURAPIKEY&callback=myMap"></script>
 
 </body>
 
