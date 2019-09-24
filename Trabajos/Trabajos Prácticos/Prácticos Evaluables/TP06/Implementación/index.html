@@ -142,7 +142,7 @@
           <input type="date" name="fecha" ng-model="fecha" value="" class="border" required>
         </div>
 
-        <h6 style="color:red" ng-show="(momentoEntrega == 'P') && ((formLoQueSea.hora.$invalid && formLoQueSea.hora.$dirty)||(formLoQueSea.fecha.$invalid && formLoQueSea.fecha.$dirty))">
+        <h6 style="color:red" ng-show="(momentoEntrega == 'P') && ((formLoQueSea.hora.$invalid || formLoQueSea.fecha.$invalid)&&(formLoQueSea.fecha.$dirty || formLoQueSea.hora.$dirty))">
           Debe ingresar una fecha y hora valida</h6>
 
 
