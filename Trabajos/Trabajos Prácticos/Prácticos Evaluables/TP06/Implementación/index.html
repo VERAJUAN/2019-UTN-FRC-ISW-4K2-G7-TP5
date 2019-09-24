@@ -175,7 +175,7 @@
             Obligatorio</h6>
           <label for="" class="">Fecha de vencimiento</label>
           <input style="width: 100px" placeholder="mm/yyyy" type="text" name="fecha_venc" ng-model="fecha_venc" value="" required
-            pattern="([1-9]|1[012]).[0-9]{4}" maxlength="7" minlength="7">
+            pattern="(((0)[0-9])|((1)[0-2]))(\/)\d{4}$" maxlength="7" minlength="7">
             <h6 style="color:red" ng-show="(metodoPago == 'T') && formLoQueSea.fecha_venc.$invalid &&formLoQueSea.fecha_venc.$dirty">
               Incorrecto</h6>
           <label for="" class="">Código de seguridad</label>
