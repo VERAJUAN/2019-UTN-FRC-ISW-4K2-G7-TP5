@@ -1,6 +1,24 @@
-.content{
-
+.header{
+  margin: 20px;
 }
+.footer img{
+  position: relative;
+  animation-name: motito;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes motito {
+  0%   {left:0px; top:0px;}
+  50% {left:100px; top:0px;}
+  75% {left:50px; top:0px;}
+  90% {left:20px; top:0px;}
+  100% {left:0px; top:0px;}
+}
+
 .block-form{
   border-bottom: 1px solid #c1c1c1;
   padding-bottom: 25px;
@@ -64,7 +82,8 @@
 
 label.button-Select{
   display: inline-block;
-    width: calc(100% - 114px);
+  width: calc(100% - 114px);
+  font-size: 25px;
 }
 
 .button-Select.enviar{
