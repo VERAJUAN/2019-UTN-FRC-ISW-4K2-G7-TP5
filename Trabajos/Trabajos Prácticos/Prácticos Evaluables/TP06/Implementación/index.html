@@ -72,7 +72,7 @@
           Obligatorio</h6>
 
         <label for="" class="">Altura</label>
-        <input type="text" name="alturaComercio" value="" ng-model="alturaComercio" ng-keyup="obtenerCoordenadasComercio()" required pattern="^[0-9]*$">
+        <input type="text" name="alturaComercio" value="" ng-model="alturaComercio" ng-keyup="obtenerCoordenadasComercio()" required pattern="^[0-9]*$" maxlength="4">
         <h6 style="color:red" ng-show="formLoQueSea.alturaComercio.$touched && formLoQueSea.alturaComercio.$invalid">
           Obligatorio - Solo números</h6>
 
@@ -106,7 +106,7 @@
           Obligatorio</h6>
 
         <label for="" class="">Altura</label>
-        <input type="text" name="alturaEntrega" value="" ng-model="alturaEntrega" required pattern="^[0-9]*$">
+        <input type="text" name="alturaEntrega" value="" ng-model="alturaEntrega" required pattern="^[0-9]*$" maxlength="4">
         <h6 style="color:red" ng-show="formLoQueSea.alturaEntrega.$touched && formLoQueSea.alturaEntrega.$invalid">
           Obligatorio - Solo números</h6>
 
@@ -166,7 +166,7 @@
 
         <div class="formAdicional" ng-if="metodoPago == 'T'">
           <label for="">Número de tarjeta</label>
-          <input type="text" ng-model="num_tarjeta" name="num_tarjeta" value="" required pattern="^4[0-9]{12}(?:[0-9]{3})?$">
+          <input type="text" ng-model="num_tarjeta" name="num_tarjeta" value="" required pattern="^4[0-9]{12}(?:[0-9]{3})?$" maxlength="16">
           <h6 style="color:red" ng-show="(metodoPago == 'T') && formLoQueSea.num_tarjeta.$invalid && formLoQueSea.num_tarjeta.$dirty">
             Incorrecto</h6>
           <label for="">Nombre y apellido del titular</label>
@@ -175,20 +175,21 @@
             Obligatorio</h6>
           <label for="" class="">Fecha de vencimiento</label>
           <input style="width: 100px" placeholder="mm/yyyy" type="text" name="fecha_venc" ng-model="fecha_venc" value="" required
-            pattern="([1-9]|1[012]).[0-9]{4}">
+            pattern="([1-9]|1[012]).[0-9]{4}" maxlength="7" minlength="7">
             <h6 style="color:red" ng-show="(metodoPago == 'T') && formLoQueSea.fecha_venc.$invalid &&formLoQueSea.fecha_venc.$dirty">
               Incorrecto</h6>
           <label for="" class="">Código de seguridad</label>
-          <input style="width: 100px" type="text" name="cod_seg" ng-model="cod_seg" value="" required pattern="[0-9]\d\d">
+          <input style="width: 100px" type="text" name="cod_seg" ng-model="cod_seg" value="" required pattern="[0-9]\d\d" maxlength="3">
           <h6 style="color:red" ng-show="(metodoPago == 'T') && formLoQueSea.cod_seg.$invalid && formLoQueSea.cod_seg.$dirty">
             Incorrecto</h6>
         </div>
 
       </div>
 
-      <button class="button-Select enviar" type="submit" ng-click="enviarPedido()" ng-model="btnEnviar" ng-disabled="formLoQueSea.$invalid && formLoQueSea.$dirty">
+      <!--<button class="btn btn-primary btn-lg" type="submit" ng-click="enviarPedido();" ng-model="btnEnviar" ng-disabled="formLoQueSea.$invalid && formLoQueSea.$dirty">
         Enviar pedido
-      </button>
+      </button>-->
+	  <input class ="btn btn-secondary btn-lg btn-block" type="button" value="Enviar pedido" ng-click="enviarPedido()" ng-disabled="formLoQueSea.$invalid"/>
 
     </form>
 
