@@ -3,113 +3,113 @@ angular
       .controller("LoQueSeaController", LoQueSeaController);
 
 function LoQueSeaController($scope,$http){
-    this.marker = null;
-    this.momentoEntrega = ""; // 'A' lo antes posible, 'P' hora programada
-    this.metodoPago = ""; // 'T' tarjeta de credito, 'E' efectivo
+    $scope.marker = null;
+    $scope.momentoEntrega = ""; // 'A' lo antes posible, 'P' hora programada
+    $scope.metodoPago = ""; // 'T' tarjeta de credito, 'E' efectivo
     $scope.localidades = ['Córdoba','Villa Carlos Paz','Río Cuarto'];
     $scope.locSelectedComercio = 'Córdoba';
     $scope.locSelectedEntrega = 'Córdoba';
-    this.reverseGeocoding = true;
-    this.lat = -31.42008329999999;
-    this.lng = -64.1887761;
+    $scope.reverseGeocoding = true;
+    $scope.lat = -31.42008329999999;
+    $scope.lng = -64.1887761;
 
-    this.obtenerCoordenadasComercio = obtenerCoordenadasComercio;
-    this.obtenerDireccionComercio = obtenerDireccionComercio;
-    this.myMap = myMap;
-    this.placeMarker = placeMarker;
-    this.cargarImagen = cargarImagen;
-    this.enviarPedido = enviarPedido;
+    $scope.obtenerCoordenadasComercio = obtenerCoordenadasComercio;
+    $scope.obtenerDireccionComercio = obtenerDireccionComercio;
+    $scope.myMap = myMap;
+    $scope.placeMarker = placeMarker;
+    $scope.cargarImagen = cargarImagen;
+    $scope.enviarPedido = enviarPedido;
 
-    this.myMap();
-    this.cargarImagen();
+    $scope.myMap();
+    $scope.cargarImagen();
 
 
     function obtenerCoordenadasComercio() {
         $http.get('https://maps.googleapis.com/maps/api/geocode/json?address='
-        + this.alturaComercio + '+'
-        + this.calleComercio + ',+'
-        + this.ciudadComercio +
+        + $scope.alturaComercio + '+'
+        + $scope.calleComercio + ',+'
+        + $scope.ciudadComercio +
         ',+cordoba'+
         '&key=YOURAPIKEY')
 
         .then(function (respuesta) {
-            this.lat = respuesta.data.results[0].geometry.location.lat;
-            this.lng = respuesta.data.results[0].geometry.location.lng;
-            this.reverseGeocoding = false;
-            this.myMap();
+            $scope.lat = respuesta.data.results[0].geometry.location.lat;
+            $scope.lng = respuesta.data.results[0].geometry.location.lng;
+            $scope.reverseGeocoding = false;
+            $scope.myMap();
         })
     }
 
     function obtenerDireccionComercio() {
         $http.get('https://maps.googleapis.com/maps/api/geocode/json?latlng='
-        + this.lat + ','
-        + this.lng + '+'
+        + $scope.lat + ','
+        + $scope.lng + '+'
         + '&key=YOURAPIKEY')
 
         .then(function (respuesta) {
           if (respuesta.data.results[0].address_components[0].types[0] == "street_number") {
-            this.alturaComercio = respuesta.data.results[0].address_components[0].long_name;
+            $scope.alturaComercio = respuesta.data.results[0].address_components[0].long_name;
           }else {
-            this.alturaComercio = "";
+            $scope.alturaComercio = "";
           }
 
           if (respuesta.data.results[0].address_components[1].types[0] == "route") {
-            this.calleComercio = respuesta.data.results[0].address_components[1].long_name;
+            $scope.calleComercio = respuesta.data.results[0].address_components[1].long_name;
           }else{
-            this.calleComercio = "";
+            $scope.calleComercio = "";
           }
 
           if(respuesta.data.results[0].address_components[3].types[0] == "locality"){
-                this.locSelectedComercio = respuesta.data.results[0].address_components[3].long_name;
+                $scope.locSelectedComercio = respuesta.data.results[0].address_components[3].long_name;
           }else if (respuesta.data.results[0].address_components[2].types[0] == "locality") {
-            this.locSelectedComercio = respuesta.data.results[0].address_components[2].long_name;
+            $scope.locSelectedComercio = respuesta.data.results[0].address_components[2].long_name;
           }
         })
     }
 
     function myMap(){
       var mapProp = {
-        center: new google.maps.LatLng(this.lat, this.lng),
+        center: new google.maps.LatLng($scope.lat, $scope.lng),
         zoom: 17,
       };
 
       var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
 
       google.maps.event.addListener(map, 'click', function (event) {
-        this.placeMarker(map, event.latLng);
-        console.log(this.reverseGeocoding);
+        $scope.placeMarker(map, event.latLng);
+        console.log($scope.reverseGeocoding);
       });
 
-      if(this.reverseGeocoding == false){
-        this.marker = null;
-        this.latLng = {'lat':this.lat, 'lng':this.lng};
-        console.log(this.latLng);
-        this.placeMarker(map, this.latLng);
+      if($scope.reverseGeocoding == false){
+        $scope.marker = null;
+        $scope.latLng = {'lat':$scope.lat, 'lng':$scope.lng};
+        console.log($scope.latLng);
+        $scope.placeMarker(map, $scope.latLng);
       }
     }
 
     function placeMarker(map, location) {
-      if (this.marker == null) {
-        this.marker = new google.maps.Marker({
+      if ($scope.marker == null) {
+        $scope.marker = new google.maps.Marker({
           position: location,
           map: map
         });
 
-        if (this.reverseGeocoding == true) {
-          this.lat = location.lat();
-          this.lng = location.lng();
-          this.obtenerDireccionComercio();
+        if ($scope.reverseGeocoding == true) {
+          $scope.lat = location.lat();
+          $scope.lng = location.lng();
+          $scope.obtenerDireccionComercio();
         }else {
-          this.reverseGeocoding = true;
+          $scope.reverseGeocoding = true;
         }
       }else {
-        this.marker.setPosition(location);
-        if (this.reverseGeocoding == true) {
-          this.lat = location.lat();
-          this.lng = location.lng();
-          this.obtenerDireccionComercio();
+        $scope.marker.setPosition(location);
+        if ($scope.reverseGeocoding == true) {
+          $scope.lat = location.lat();
+          $scope.lng = location.lng();
+          $scope.obtenerDireccionComercio();
         }else {
-          this.reverseGeocoding = true;
+          $scope.reverseGeocoding = true;
         }
       }
     }
