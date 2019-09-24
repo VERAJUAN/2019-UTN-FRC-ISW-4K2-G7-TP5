@@ -129,10 +129,10 @@
         <h1>Momento de entrega</h1>
         <h3>¿Cuándo quieres recibirlo?</h3>
         <div ng-class="{'button-Select' : 'true', 'border' : momentoEntrega == 'A'}" ng-model="momentoLoAntesPosible"
-          ng-click="momentoEntrega='A'">Lo antes posible
+          ng-click="momentoEntrega='A';momentoEntregaElegido='S'">Lo antes posible
         </div>
         <div ng-class="{'button-Select' : 'true', 'border' : momentoEntrega == 'P'}" ng-model="momentoProgramado"
-          ng-click="momentoEntrega='P'">Programar hora
+          ng-click="momentoEntrega='P';momentoEntregaElegido='S'">Programar hora
         </div>
         <div class="formAdicional" ng-if="momentoEntrega == 'P'">
           <label for="" class="">Hora</label>
@@ -152,7 +152,7 @@
         <h1>Datos de pago</h1>
         <h3>¿Cómo deseas pagarlo?</h3>
         <div ng-class="{'button-Select' : 'true', 'border' : metodoPago == 'E'}" ng-model="metodoEfectivo"
-          ng-click="metodoPago='E'">Efectivo
+          ng-click="metodoPago='E';pagoElegido='S'">Efectivo
         </div>
         <div class="formAdicional" ng-if="metodoPago == 'E'">
           <label for="" class="">Monto con el que vas abonar</label>
@@ -161,7 +161,7 @@
             Ingrese un monto valido</h6>
         </div>
         <div ng-class="{'button-Select' : 'true', 'border' : metodoPago == 'T'}" ng-model="metodoTarjeta"
-          ng-click="metodoPago='T'">Tarjeta VISA
+          ng-click="metodoPago='T';pagoElegido='S'">Tarjeta VISA
         </div>
 
         <div class="formAdicional" ng-if="metodoPago == 'T'">
@@ -186,7 +186,7 @@
 
       </div>
 
-      <button class="button-Select enviar" type="submit" ng-click="enviarPedido()" ng-model="btnEnviar" ng-disabled="formLoQueSea.$invalid">
+      <button class="button-Select enviar" type="submit" ng-click="enviarPedido()" ng-model="btnEnviar" ng-disabled="formLoQueSea.$invalid || pagoElegido == 'N' || momentoEntregaElegido =='N'">
         Enviar pedido
       </button>
 

@@ -6,6 +6,8 @@ function LoQueSeaController($scope,$http){
     $scope.marker = null;
     $scope.momentoEntrega = ""; // 'A' lo antes posible, 'P' hora programada
     $scope.metodoPago = ""; // 'T' tarjeta de credito, 'E' efectivo
+	$scope.pagoElegido = 'N'; // metodo de pago elegido 'S' si 'N' no
+	$scope.momentoEntregaElegido = 'N'; // momento de Entrega Elegido 'S' si 'N' no
     $scope.localidades = ['Córdoba','Villa Carlos Paz','Río Cuarto'];
     $scope.locSelectedComercio = 'Córdoba';
     $scope.locSelectedEntrega = 'Córdoba';
