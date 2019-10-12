@@ -37,6 +37,7 @@
 | Prácticos no Evaluables | TP\<nro> - \<nombre-tpNE>.pdf | /Trabajos/Trabajos Prácticos/Prácticos No Evaluables
 | User stories para el práctico evaluable 06 | User Stories DeliverEat.docx | /Trabajos/Trabajos Prácticos/Prácticos Evaluables/TP06
 | Guía de estilos para el práctico evaluable 06 | Guía Estilos.md | /Trabajos/Trabajos Prácticos/Prácticos Evaluables/TP06
+| Template para casos de prueba para el práctico evaluable 12 | Template_Caso_De_Prueba.xlsx | /Trabajos/Trabajos Prácticos/Prácticos Evaluables/TP12
 | Informe técnico Continuous Delivery | Informe técnico Continuous Delivery - Grupo 7 - Ingeniería de software - UTN FRC.pdf | /Trabajos/Trabajos Conceptuales/Informe Técnico
 | Template informe técnico IEEE | Formato-IEEE-Informes.pdf | /Trabajos/Trabajos Conceptuales/Informe Técnico
 
