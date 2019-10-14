@@ -21,6 +21,9 @@
 │       │   └── TP06
 │       │       ├── TP6 - Guía Estilos.md
 │       │       └── TP6 - User Stories DeliverEat.docx
+│       │   └── TP12
+│       │       ├── Template_Caso_De_Prueba.xlsx
+│       │       └── Casos_De_Prueba_TP12.xlsx
 │       └── Prácticos No Evaluables
 └── README.md
 
@@ -38,7 +41,7 @@
 | User stories para el práctico evaluable 06 | User Stories DeliverEat.docx | /Trabajos/Trabajos Prácticos/Prácticos Evaluables/TP06
 | Guía de estilos para el práctico evaluable 06 | Guía Estilos.md | /Trabajos/Trabajos Prácticos/Prácticos Evaluables/TP06
 | Template para casos de prueba para el práctico evaluable 12 | Template_Caso_De_Prueba.xlsx | /Trabajos/Trabajos Prácticos/Prácticos Evaluables/TP12
-| Casos de prueba para el práctico evaluable 12 | Caso_De_Prueba_TP12.xlsx | /Trabajos/Trabajos Prácticos/Prácticos Evaluables/TP12
+| Casos de prueba para el práctico evaluable 12 | Casos_De_Prueba_TP12.xlsx | /Trabajos/Trabajos Prácticos/Prácticos Evaluables/TP12
 | Informe técnico Continuous Delivery | Informe técnico Continuous Delivery - Grupo 7 - Ingeniería de software - UTN FRC.pdf | /Trabajos/Trabajos Conceptuales/Informe Técnico
 | Template informe técnico IEEE | Formato-IEEE-Informes.pdf | /Trabajos/Trabajos Conceptuales/Informe Técnico
 
