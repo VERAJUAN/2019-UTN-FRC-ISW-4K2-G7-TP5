@@ -62,7 +62,7 @@
 | Imagen check de pedido realizado | check.jpg | /Trabajos/Trabajos Prácticos/Prácticos Evaluables/TP06/Implementación/img
 | Imagen logo "DeliverEat" | logo.png | /Trabajos/Trabajos Prácticos/Prácticos Evaluables/TP06/Implementación/img
 | Imagen footer del formulario | delivery.gif | /Trabajos/Trabajos Prácticos/Prácticos Evaluables/TP06/Implementación/img
-| Estilos de la implementación "Lo que sea" | delivery.gif | /Trabajos/Trabajos Prácticos/Prácticos Evaluables/TP06/Implementación/css
+| Estilos de la implementación "Lo que sea" | styles.css | /Trabajos/Trabajos Prácticos/Prácticos Evaluables/TP06/Implementación/css
 | Framework Angular minificado | angular.min.js | /Trabajos/Trabajos Prácticos/Prácticos Evaluables/TP06/Implementación/js
 | Módulo App Angular "Lo que sea" | loquesea.module.js | /Trabajos/Trabajos Prácticos/Prácticos Evaluables/TP06/Implementación/js
 | Carga de Córdoba Google Maps | maps.js | /Trabajos/Trabajos Prácticos/Prácticos Evaluables/TP06/Implementación/js
